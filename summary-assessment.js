@@ -149,7 +149,7 @@ function each(coll, f) {
   //Example:
   // var pizza = makePizza("thin", "M", 2);
   // pizza.addIngredients("tomato");
-  // pizza.addIngredients("meshroom");
+  // pizza.addIngredients("mushroom");
   // pizza.addIngredients("meat");
   // console.log(pizza.displayIngredaints());
   // pizza.bakePizza();
@@ -158,6 +158,41 @@ function each(coll, f) {
   // pizza.eatSlice();
   
   // Write your code here .....
+  var pizza = makePizza("thin", "M", 2);
+  function makePizza(crust, size, slice) {
+  	var crust = crust
+  	var size = size
+  	var slice = slice
+  	var ingredients = []
+  	return{
+  		addIngredients: function(str) {
+  			ingredients.push(str);
+  			return  str + ' Added';
+  		},
+  		displayIngredaints: function() {
+  			return 'The ingredients are: ' + ingredients.join(', ')
+  		},
+  		bake: function() {
+  			 var baked = window.setInterval(function myCallback (){
+  				console.log('Your ' + crust + ' ' + size + ' ' + slice + ' pizza is done.');
+
+  			window.clearTimeout(baked);
+
+  			}, 2000);
+
+  		}
+  	}
+}
+
+  
+
+
+
+
+ 
+ 
+
+
   
   //=============================================================================
   /*                                  Q6                                      */

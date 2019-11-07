@@ -160,26 +160,33 @@ function each(coll, f) {
   // Write your code here .....
   var pizza = makePizza("thin", "M", 2);
   function makePizza(crust, size, slice) {
-  	var crust = crust
-  	var size = size
-  	var slice = slice
-  	var ingredients = []
+  	var crust = crust;
+  	var size = size;
+  	var slice = slice;
+  	var ingredients = [];
   	return{
   		addIngredients: function(str) {
   			ingredients.push(str);
   			return  str + ' Added';
   		},
   		displayIngredaints: function() {
-  			return 'The ingredients are: ' + ingredients.join(', ')
+  			return 'The ingredients are: ' + ingredients.join(', ');
   		},
   		bake: function() {
   			 var baked = window.setInterval(function myCallback (){
+
   				console.log('Your ' + crust + ' ' + size + ' ' + slice + ' pizza is done.');
 
   			window.clearTimeout(baked);
 
   			}, 2000);
-
+  		},
+  		eatSlice: function() {
+  			if(slice === 0) {
+  				return "Pizza Is finished";
+  			}
+  			slice -= 1
+  			return "You have " + slice + " left";
   		}
   	}
 }
@@ -217,8 +224,55 @@ function each(coll, f) {
   */
   
   // Now, to make sure that you are actually reading, make a comment below this and type: Yes I am
+  //Yes I am
   
   // Write your code here .....
+var x = ReadingList()
+x.AddBook('harry');
+//x.AddBook('harry1');
+
+  function ReadingList () {
+
+  	var books = {};
+
+  	books.read = read;
+  	books.unRead = unRead;
+  	books.toRead = [];
+	books.currentRead = currentRead
+  	books.readBooks = [];
+  	books.AddBook = AddBook;
+  	books.finishCurrentBook = finishCurrentBook
+
+  	return books
+  }
+  function AddBook(name) {
+  	this.name = name
+  	this.toRead.push(name)
+  	return this.toRead
+  }
+  function read() {
+  	this.read = this.readBooks.length;
+  	return this.read;
+  }
+   function unRead() {
+  	this.unread = this.toRead.length;
+  	return this.unread;
+  }
+  function finishCurrentBook() {
+  	this.readBooks.push(this.currentRead);
+  	this.currentRead = this.toRead[0]
+  	this.toRead.splice(0,1);
+  	return this.readBooks;
+  }
+  function currentRead() {
+  	this.currentRead = this.toRead[0]
+  	
+  	return this.currentRead
+  }
+   function readBooks() {
+  	return this.readBooks;
+  }
+  
   
   //=============================================================================
   /*                                  Q7                                       */

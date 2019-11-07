@@ -60,6 +60,12 @@ function each(coll, f) {
   
   function wordLengths(str) {
       // TODO: your code here 
+  	var arr = str.split(' ');
+
+      return map(arr, function(element, i) {
+      	return element.length;
+    
+      });
   }
   
   //=============================================================================
@@ -73,6 +79,17 @@ function each(coll, f) {
   
   function countOccurrences(string, character) {
       // your code is here
+      var count = 0;
+
+       each(string, function(element, i) {
+      	if(element === character) {
+
+      		count ++
+
+      	}
+
+      });
+      	return count;
   }
   
   //=============================================================================
@@ -84,7 +101,12 @@ function each(coll, f) {
   // wordsLongerThanThree("Hello Mad World") //["Hello", "World"]
   
   function wordsLongerThanThree(str) {
-      // TODO: your code here 
+      // TODO: your code here
+      var splitted = str.split(' ') 
+
+      return filter(splitted, function(element, i) {
+      	return element.length > 3;
+      });
   }
   
   //=============================================================================

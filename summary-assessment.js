@@ -286,13 +286,53 @@ x.AddBook('harry');
   //return "Can't fit" if you try to add an item that exceeds the storage size limit
   //when the safe is full return a string representing all the items that are in the safe
   //Example:
-  //  var safe = makeSafe(5)
-  //  safe('watch','small')
-  //  safe('gold-bar','big')
-  //  safe('silver-bar','big') => "Can't fit"
-  //  safe('money','small') => "watch gold-bar money"
+   var safe = makeSafe(5)
+   // safe.addItem('watch','small')
+   // safe.addItem('gold-bar','big')
+   // safe.addItem('silver-bar','big') => "Can't fit"
+   // safe.addItem('money','small') => "watch gold-bar money"
   
   // Write your code here .....
+
+  function makeSafe(size) {
+  	var size = size;
+  	var items = []
+  	var itemSizeInt = 0
+  	return {
+  		addItem: function(item, itemSize) {
+  			
+  			itemSize.toLowerCase()
+
+  			if(itemSize === 'big') {
+  				itemSizeInt += 3
+  			}
+  			if(itemSize === 'medium') {
+  				itemSizeInt += 2
+  			}
+  			if(itemSize === 'small') {
+  				itemSizeInt += 1
+  			}
+
+
+  			if(size < itemSizeInt){
+  				if(itemSize === 'big'){
+  					itemSizeInt -= 3
+  				}
+  				if(itemSize === 'medium') {
+  				itemSizeInt -= 2
+  			}
+  			if(itemSize === 'small') {
+  				itemSizeInt -= 1
+  			}
+  				return 'Cannot fit'
+  			}else{
+  				
+  			items.push(item)
+  			}return items
+  		}
+
+  	}
+  }
   
   //=============================================================================
   /*                                  Q8                                       */

@@ -119,9 +119,16 @@ function each(coll, f) {
   //repeatString('dog', 1); // => 'dog' 
   //repeatString('dog', 2); // => 'dog' + 'dog' => 'dogdog' 
   //repeatString('dog', 3); // => 'dog' + 'dog' + 'dog' => 'dogdogdog'
-  
+  var string = ''
   function repeatString(str, count) { 
    // TODO: your code here 
+   if(count === 0) {
+   	return string;
+   }
+
+   string += str;
+    count--
+   return repeatString(str, count);
   } 
    
   

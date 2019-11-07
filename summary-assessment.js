@@ -374,10 +374,19 @@ x.AddBook('harry');
   //================================================================================
   // Theoretical questions.
   // 1- In your own words,Why do we use Closures ?
-  To nest global variables and make them not accesible by other functions
+
+  //To nest global variables and make them not accesible by other functions
+
   // 2- In OOP, what does "this" refer to ?
-  refer to the attribute in the object inside the main function
+
+  //refer to the attribute in the object inside the main function
+
   // 3- What is jQuery?
-  is a tool used to make using js with html easie
+
+  //is a language used to make using js with html easier and quicker with shorter lines of code.
+
   // 4- what is the diffrence between Closure's methods and The OOP's methods?
+  // Well clousers are use to nest a global variable from other functions and all of the functions are nested inside the main function, 
+  //OOP is used to reduce the consumption of memory space and uses (this) to refer to the attribute, and the functions are outside
+  //the main function
   

@@ -326,7 +326,7 @@ x.AddBook('harry');
   			}
   				return 'Cannot fit'
   			}else{
-  				
+
   			items.push(item)
   			}return items
   		}
@@ -374,10 +374,10 @@ x.AddBook('harry');
   //================================================================================
   // Theoretical questions.
   // 1- In your own words,Why do we use Closures ?
-  
+  To nest global variables and make them not accesible by other functions
   // 2- In OOP, what does "this" refer to ?
-  
+  refer to the attribute in the object inside the main function
   // 3- What is jQuery?
-  
+  is a tool used to make using js with html easie
   // 4- what is the diffrence between Closure's methods and The OOP's methods?
   

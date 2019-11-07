@@ -1,4 +1,4 @@
-$('body').css('background-color','red')
+
 
 $('#create').click(function(){
 if($("#checkbox1").prop('checked') && $("#checkbox2").prop('checked') && $("#checkbox3").prop('checked')){
@@ -16,7 +16,7 @@ $('ul').append('<li class="green">' + 'green' + '</li>')
 if($("#checkbox2").prop('checked')){
 	$('ul').append('<li class="blue">' + 'blue' + '</li>')
 }
-if($("#checkbox2").prop('checked')){
+if($("#checkbox3").prop('checked')){
 	$('ul').append('<li class="red">' + 'red' + '</li>')
 }
 }
@@ -24,23 +24,24 @@ if($("#checkbox2").prop('checked')){
 
 
 $('#remove').click(function(){
+
 	if($("#checkbox1").prop('checked') && $("#checkbox2").prop('checked') && $("#checkbox3").prop('checked')){
-	$('ul').remove('<li class="black">' + 'black' + '</li>')
+	$('.black').remove()
 }else if($("#checkbox1").prop('checked') && $("#checkbox2").prop('checked')){
-	$('ul').remove('<li class="purple">' + 'purple' + '</li>')
+	$('.purple').remove()
 }else if($("#checkbox1").prop('checked') && $("#checkbox3").prop('checked')){
-$('ul').remove('<li class="green">' + 'green' + '</li>')
+$('.green').remove()
 }else if($("#checkbox2").prop('checked') && $("#checkbox3").prop('checked')){
-	$('ul').remove('<li class="orange">' + 'orange' + '</li>')
+	$('.orange').remove()
 }else{
 	if($("#checkbox1").prop('checked')){
-	$('ul').remove('<li class="yellow">' + 'yellow' + '</li>')
+	$('.yellow').remove()
 }
 if($("#checkbox2").prop('checked')){
-	$('ul').remove('<li class="blue">' + 'blue' + '</li>')
+	$('.blue').remove()
 }
-if($("#checkbox2").prop('checked')){
-	$('ul').remove('<li class="red">' + 'red' + '</li>')
+if($("#checkbox3").prop('checked')){
+	$('.red').remove()
 }
 }
 })
